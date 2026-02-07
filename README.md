@@ -10,7 +10,6 @@ This is my first original security project — no copy-paste labs here 😤
 
 **Date** : February 2026  
 **Tools** : Azure Portal only (no Terraform yet – that's Project 2 baby!)  
-**Cost** : £0 💸 (free tier, no VMs running)  
 **Resources created** : Subscription, RG, VNet, NSG + custom rules, Defender for Cloud (free CSPM)
 
 ## Architecture at a glance 🗺️
@@ -24,34 +23,30 @@ This is my first original security project — no copy-paste labs here 😤
 
 ## Step-by-Step Build – Let's go! 🛠️
 
-1. **Created new Azure Subscription** 💳  
-   Pay-as-you-go + £200 credit + budget alert at 100%  
-   [Screenshot: Subscription overview & budget success](screenshots/001-subscription-created-overview.png)
-
-2. **Created Resource Group** 📁  
+1. **Created Resource Group** 📁  
    Name: `proj1-hardened-landing-zone-rg` | Region: UK South  
    [Screenshot: RG creation success](screenshots/003-resource-group-created-success.png)
 
-3. **Built Virtual Network (VNet)** 🌐  
+2. **Built Virtual Network (VNet)** 🌐  
    Name: `proj1-vnet` | Address space: 10.0.0.0/16 | Subnet: default (10.0.0.0/24)  
-   [Screenshot: VNet deployment success](screenshots/004-vnet-deployment-success.png)  
+   [Screenshot: VNet deployment success]()  
    [Screenshot: VNet inside RG](screenshots/005-vnet-inside-rg.png)
 
-4. **Created & Attached NSG** 🛡️  
+3. **Created & Attached NSG** 🛡️  
    Name: `proj1-nsg` | Attached to `default` subnet  
    [Screenshot: NSG association success](screenshots/008-nsg-associated-success.png)
 
-5. **Locked Down Inbound Rules** 🚫→✅  
+4. **Locked Down Inbound Rules** 🚫→✅  
    - Priority 100: **Deny-All-Inbound-Internet** (Any → Deny)  
    - Priority 110: **Allow-SSH-Inbound** (only my public IP → port 22 TCP → Allow)  
    [Screenshot: Inbound rules list with Deny rule](screenshots/011-inbound-rules-list-with-deny.png)  
    [Screenshot: SSH rule with my public IP](screenshots/013-ssh-rule-with-public-ip-updated.png)
 
-6. **Controlled Outbound Traffic** 🌍  
+5. **Controlled Outbound Traffic** 🌍  
    Priority 120: **Allow-Outbound-Internet** (Any → Allow)  
    [Screenshot: Outbound rules list](screenshots/014-outbound-allow-internet-added.png)
 
-7. **Enabled Microsoft Defender for Cloud (Free CSPM)** 👀  
+6. **Enabled Microsoft Defender for Cloud (Free CSPM)** 👀  
    Free posture management onboarded → 2 resources scanned, 0 critical alerts, 6 recommendations  
    [Screenshot: Defender Overview](screenshots/015-defender-overview-onboarded.png)  
    [Screenshot: Recommendations list](screenshots/016-defender-recommendations-loaded.png)  
