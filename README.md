@@ -29,7 +29,7 @@ This is my first original security project — no copy-paste labs here 😤
 
 2. **Built Virtual Network (VNet)** 🌐  
    Name: `proj1-vnet` | Address space: 10.0.0.0/16 | Subnet: default (10.0.0.0/24)  
-   [Screenshot: VNet deployment success]()  
+   [Screenshot: VNet deployment success](https://github.com/KevoT0/project1-hardened-azure-landing-zone/blob/main/1%20(zero%20trust).png )  
    [Screenshot: VNet inside RG](screenshots/005-vnet-inside-rg.png)
 
 3. **Created & Attached NSG** 🛡️  
