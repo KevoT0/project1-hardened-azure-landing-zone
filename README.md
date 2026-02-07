@@ -25,7 +25,6 @@ This is my first original security project — no copy-paste labs here 😤
 
 ## 1. **Created Resource Group** 📁  
    Name: `proj1-hardened-landing-zone-rg` | Region: UK South  
-   [Screenshot: RG creation success](screenshots/003-resource-group-created-success.png)
 
 ## 2. **Built Virtual Network (VNet)** 🌐  
    Name: `proj1-vnet` | Address space: 10.0.0.0/16 | Subnet: default (10.0.0.0/24)
@@ -34,28 +33,36 @@ This is my first original security project — no copy-paste labs here 😤
 ## 3. **Created & Attached NSG** 🛡️  
    Name: `proj1-nsg` | Attached to `default` subnet
    <img width="789" height="382" alt="image" src="https://github.com/user-attachments/assets/aa5a5564-15a0-40b3-ad10-7e196a99a9a0" />
+   
    <img width="1111" height="727" alt="image" src="https://github.com/user-attachments/assets/9e66534a-e611-4569-9998-5b91bdb28275" />
+   
    <img width="1098" height="697" alt="image" src="https://github.com/user-attachments/assets/2ef12d3d-355d-4c1f-9568-6a33f7ebf873" />
 
 ## 4. **Locked Down Inbound Rules** 🚫→✅  
    - Priority 100: **Deny-All-Inbound-Internet** (Any → Deny)  
    <img width="589" height="775" alt="image" src="https://github.com/user-attachments/assets/a41d40ba-933d-4420-b1d4-89c6b852685e" />
+   
    <img width="1426" height="373" alt="image" src="https://github.com/user-attachments/assets/832b16be-7f6e-499d-96c8-14760531a86d" />
    
    - Priority 110: **Allow-SSH-Inbound** (only my public IP → port 22 TCP → Allow)
    <img width="559" height="814" alt="image" src="https://github.com/user-attachments/assets/0440f3f2-2e80-4f4c-bfcb-5362c4b7c7de" />
+   
    <img width="1452" height="429" alt="image" src="https://github.com/user-attachments/assets/4b8d7f09-6a9e-448f-81c3-15dfcff2a578" />
+   
    <img width="564" height="670" alt="image" src="https://github.com/user-attachments/assets/f2d6cb0c-c9c3-472b-9e17-967efb6d7e80" />
 
 ## 5. **Controlled Outbound Traffic** 🌍  
    Priority 120: **Allow-Outbound-Internet** (Any → Allow)  
    <img width="552" height="766" alt="image" src="https://github.com/user-attachments/assets/8e47cfd2-e5b7-46c0-9c01-3a0b22fcf3d4" />
+   
    <img width="1663" height="391" alt="image" src="https://github.com/user-attachments/assets/4d243fc3-982f-4283-a14a-e45a9eb83b21" />
 
 ## 6. **Enabled Microsoft Defender for Cloud (Free CSPM)** 👀  
    Free posture management onboarded → 2 resources scanned, 0 critical alerts, 6 recommendations  
    <img width="1885" height="796" alt="image" src="https://github.com/user-attachments/assets/3cafcdfa-2924-49e5-a8ab-4597bc3e2710" />
+   
    <img width="1914" height="766" alt="image" src="https://github.com/user-attachments/assets/f1214a8f-5ce5-4cce-82d6-7e52ae07715e" />
+   
    <img width="1644" height="637" alt="image" src="https://github.com/user-attachments/assets/e97d2f7d-cd1d-486f-b344-197145f9a0af" />
 
 ## What I Learned (Zero-Trust Mindset Unlocked) 🧠💡
@@ -76,11 +83,5 @@ This is my first original security project — no copy-paste labs here 😤
 - Add Sentinel + agentic AI for smart threat hunting  
 - Implement Just-In-Time VM access & Azure Bastion  
 - Fix Defender recommendations (encryption, tags, etc.)
-
-This is my first original security project — built from scratch, no copy-paste.  
-Ready for junior/mid-level Azure Security Engineer interviews 💼
-
-Feedback, roast, or collab welcome!  
-Connect with me: [Your LinkedIn / X handle here]
 
 #Azure #CloudSecurity #ZeroTrust #Cybersecurity #Portfolio
